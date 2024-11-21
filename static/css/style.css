@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Inter';
+}
+header {
+    background-image: url('static/img/banner.jpeg');
+    display: flex;
+    height: 5rem;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(39, 104, 189);
+    font-size: 24px;
+    height: 3.5rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    min-height: calc(100vh - 8.5rem - 3.5rem);
+}
+footer{
+    background-color: rgb(39, 104, 189);
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}

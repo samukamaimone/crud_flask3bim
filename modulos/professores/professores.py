@@ -11,7 +11,7 @@ def index():
 
 @bp_professor.route('/add')
 def add():
-    return render_template('professores_add.html')
+    return render_template('professor_add.html')
 
 @bp_professor.route('/save', methods=['POST'])
 def save():

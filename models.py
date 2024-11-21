@@ -21,7 +21,7 @@ class Disciplina(db.Model):
     nome_disciplina = db.Column(db.String(100))
     credito = db.Column(db.Integer)
 
-    usuario = db.relationship('Professor', foreign_keys=professor_id)
+    professor = db.relationship('Professor', foreign_keys=professor_id)
 
     def __init__(self, professor_id, nome_disciplina, credito):
         self.professor_id = professor_id
