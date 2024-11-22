@@ -15,11 +15,13 @@
     <table>
         <tr>
             <th>Professor</th>
+            <th>Disciplina</th>
             <th>Credito</th>
         </tr>
         {% for d in disciplinas %}
         <tr>
-            <td>{{d.professor.nome}}</td>
+            <td>{{d.professor.nome_professor}}</td>
+            <td>{{d.nome_disciplina}}</td>
             <td>{{d.credito}}</td>
         </tr>
         {% endfor %}

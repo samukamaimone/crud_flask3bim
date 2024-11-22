@@ -6,8 +6,8 @@ class Professor(db.Model):
     nome_professor = db.Column(db.String(100))
     departamento = db.Column(db.String(50))
 
-    def __init__(self, nome, departamento):
-        self.nome = nome
+    def __init__(self, nome_professor, departamento):
+        self.nome_professor = nome_professor
         self.departamento = departamento
 
     def __repr__(self):
@@ -29,4 +29,4 @@ class Disciplina(db.Model):
         self.credito = credito
 
     def __repr__(self):
-        return "<Disciplina {self.professor.nome} - {self.disciplina.nome_disciplina} - {self.credito}>".f
+        return "<Disciplina {self.professor.nome} - {self.disciplina.nome_disciplina} - {self.disciplina.credito}>".f

@@ -6,23 +6,27 @@
     font-family: 'Inter';
 }
 header {
-    background-image: url('static/img/banner.jpeg');
+    background-color: rgb(39, 104, 189);
     display: flex;
     height: 5rem;
     color: white;
     align-items: center;
     justify-content: center;
 }
+header a {
+    text-decoration: none;
+    color: white;
+}
 nav {
     display: flex;
-    justify-content: space-between;
     padding: 1rem;
-    background-color: rgb(39, 104, 189);
+    background-color: rgb(29, 77, 139);
     font-size: 24px;
     height: 3.5rem;
 }
 nav a {
     color: white;
+    margin-right: 3rem;
     text-decoration: none;
 }
 main {

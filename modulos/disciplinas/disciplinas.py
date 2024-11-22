@@ -12,15 +12,15 @@ def index():
 @bp_disciplina.route('/add')
 def add():
     p = Professor.query.all()
-    return render_template('professor_add.html', professores = p)
+    return render_template('disciplina_add.html', professores = p)
 
 @bp_disciplina.route('/save', methods=['POST'])
 def save():
     professor_id = request.form.get('professor_id')
+    disciplina = request.form.get('disciplina')
     credito = request.form.get('credito')
-
-    if professor_id and credito:
-        bd_disciplina = Disciplina(professor_id, credito)
+    if professor_id and disciplina and credito:
+        bd_disciplina = Disciplina(professor_id, disciplina, credito)
         db.session.add(bd_disciplina)
         db.session.commit()
         flash('Disciplina salva com sucesso!!')

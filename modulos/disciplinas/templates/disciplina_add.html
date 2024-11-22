@@ -11,22 +11,17 @@
     {% endif %}
     <form action="/disciplinas/save" method="post">
         <div>
-            <label for="nome">Nome do Professor: </label>
-            <select name="professor_id" id="nome" required>
+            <label for="nome_professor">Nome do Professor: </label>
+            <select name="professor_id" id="nome_professor" required>
                 <option value=""></option>
                 {% for p in professores %}
-                <option value="{{p.id}}">{{p.nome}}</option>
+                <option value="{{p.id}}">{{p.nome_professor}}</option>
                 {% endfor %}
             </select>
         </div>
         <div>
             <label for="disciplina">Disciplina: </label>
-            <select name="_id" id="pizza" required>
-                <option value=""></option>
-                {% for p in pizzas %}
-                <option value="{{p.id}}">{{p.sabor}}</option>
-                {% endfor %}
-            </select>
+            <input type="text" name="disciplina" id="disciplina" required>
         </div>
         <div>
             <label for="credito">Credito: </label>
