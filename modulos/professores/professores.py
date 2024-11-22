@@ -13,6 +13,18 @@ def index():
 def add():
     return render_template('professor_add.html')
 
+@bp_professor.route('/remove/<int:id>')
+def remove(id):
+    if id > 0:
+        p = Professor.query.get(id)
+        db.session.delete(p)
+        db.session.commit()
+        flash('Disciplina removida com sucesso!')
+        return redirect('/professores')
+    else:
+        flash('Caminho Incorreto!')
+        return redirect('/professores')
+
 @bp_professor.route('/save', methods=['POST'])
 def save():
     nome_professor = request.form.get('nome_professor')

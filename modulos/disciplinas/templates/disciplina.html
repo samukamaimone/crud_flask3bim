@@ -23,6 +23,9 @@
             <td>{{d.professor.nome_professor}}</td>
             <td>{{d.nome_disciplina}}</td>
             <td>{{d.credito}}</td>
+            <td>
+                <a href="/disciplinas/remove/{{d.id}}">Remover</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

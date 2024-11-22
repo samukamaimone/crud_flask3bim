@@ -14,6 +14,18 @@ def add():
     p = Professor.query.all()
     return render_template('disciplina_add.html', professores = p)
 
+@bp_disciplina.route('/remove/<int:id>')
+def remove(id):
+    if id > 0:
+        d = Disciplina.query.get(id)
+        db.session.delete(d)
+        db.session.commit()
+        flash('Disciplina removida com sucesso!')
+        return redirect('/disciplinas')
+    else:
+        flash('Caminho Incorreto!')
+        return redirect('/disciplinas')
+
 @bp_disciplina.route('/save', methods=['POST'])
 def save():
     professor_id = request.form.get('professor_id')

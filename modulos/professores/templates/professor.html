@@ -21,6 +21,9 @@
         <tr>
             <td>{{p.nome_professor}}</td>
             <td>{{p.departamento}}</td>
+            <td>
+                <a href="/professores/remove/{{p.id}}">Remover</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

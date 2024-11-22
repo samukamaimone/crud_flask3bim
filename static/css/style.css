@@ -31,12 +31,25 @@ nav a {
 }
 main {
     min-height: calc(100vh - 8.5rem - 3.5rem);
+    padding: 1rem;
 }
 footer{
     background-color: rgb(39, 104, 189);
     height: 3.5rem;
     display: flex;
     align-items: center;
+    justify-content: end;
+    padding-right: 1rem;
     color: white;
     font-size: 24px;
+}
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 0.5rem;
+}
+table {
+    margin-bottom: 1rem;
 }
